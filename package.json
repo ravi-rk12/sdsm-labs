@@ -1,38 +1,67 @@
 {
   "name": "sdsm-labs",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Sanche Darbar Sabji Mandi - Complete Market Management System",
+  "keywords": [
+    "react",
+    "typescript",
+    "vite",
+    "tailwind",
+    "mandi",
+    "agriculture"
+  ],
+  "author": "SDSM Development Team",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "tailwind:build": "npx @tailwindcss/cli -i ./src/index.css -o ./dist/output.css --watch"
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist node_modules/.vite",
+    "format": "prettier --write src/**/*.{ts,tsx,css,md}"
   },
   "dependencies": {
+    "framer-motion": "^10.16.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "framer-motion": "^12.23.9",
-    "react-hotkeys-hook": "^5.1.0",
-    "react-router-dom": "^6.14.1",
-    "use-indexeddb": "^2.0.2",
-    "workbox-window": "^7.3.0"
+    "react-hotkeys-hook": "^4.4.1",
+    "react-icons": "^4.12.0",
+    "react-router-dom": "^7.7.1"
   },
   "devDependencies": {
-    "eslint": "^9.31.0",
-    "@tailwindcss/cli": "^4.1.11",
-    "@tailwindcss/postcss": "^4.1.11",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
-    "@typescript-eslint/eslint-plugin": "^8.38.0",
-    "@typescript-eslint/parser": "^8.38.0",
-    "@vitejs/plugin-react": "^4.6.0",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react": "^4.0.3",
     "autoprefixer": "^10.4.21",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
     "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.11",
-    "typescript": "~5.8.3",
-    "vite": "^4.4.9",
-    "vite-plugin-pwa": "^1.0.1"
+    "prettier": "^3.0.0",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "vite-plugin-pwa": "^0.16.7"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

@@ -1,6 +1,7 @@
+/* tsconfig.json */
 {
   "compilerOptions": {
-    "target": "ES2021",
+    "": "ES2021",
     "lib": ["DOM", "DOM.Iterable", "ES2021"],
     "module": "ESNext",
     "moduleResolution": "Node",
